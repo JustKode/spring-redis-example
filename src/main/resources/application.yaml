@@ -1,0 +1,22 @@
+spring:
+  cache:
+    type: redis
+  redis:
+    host: localhost
+    port: 6379
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/redis
+    username: root
+    password: redis
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      use-new-id-generator-mappings: false
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
+    database: mysql
+    properties:
+      hibernate:
+        format_sql: true
